@@ -1,7 +1,5 @@
 # portfolioWebsitePublic
 
-# Portfolio Website
-
 This is my portfolio website built using Node.js and React. It showcases my skills and serves as a platform to share my work and contact information.
 
 ## Live URL
@@ -45,7 +43,7 @@ npm start
 Open your browser and visit http://localhost:5000 to view the website.
 
 
-Nodemailer Gmail Configuration:
+## Nodemailer Gmail Configuration:
 To enable the contact form functionality and send emails using Nodemailer with Gmail, follow these steps:
 
 Open the project in a text editor.
