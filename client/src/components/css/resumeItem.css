@@ -41,7 +41,7 @@
     display: flex;
     justify-content: center;
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     .jobContainer {
       width: 100%;
       margin-left: 10%;
@@ -49,13 +49,13 @@
   
     .item1{
         height: auto;
-        margin-bottom:20vh;
+        margin-bottom:20dvh;
         width:90%
     }
     .item {
       height: auto;
-      padding-top: 10vh;
-      margin-bottom:20vh;
+      padding-top: 10dvh;
+      margin-bottom:20dvh;
       width:90%
     }
   }

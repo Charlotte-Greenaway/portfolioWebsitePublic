@@ -5,8 +5,6 @@
     --lightColor:#F7F9FB;
     --hoverblue:#5085A5;
     --hrcolor:#31708E;
-    --mobheight:640px;
-    --mobheight2:640px;
 }
 .darkmode {
     background-color: rgb(65, 64, 64);
@@ -23,7 +21,7 @@
 footer{
     bottom:0;
     position:fixed;
-    height:20vh;
+    height:20dvh;
     width:100%;
     background-color: var(--hrcolor);
     font-family: sans-serif;
@@ -31,20 +29,20 @@ footer{
     left:0;
 }
 footer p{
-    font-size: 2vh;
+    font-size: 2dvh;
     color: var(--lightColor);
     vertical-align: middle;
 }
 footer h3{
-    font-size: 3vh;
+    font-size: 3dvh;
     color: var(--lightblue);
     vertical-align: middle;
 }
 footer a{
-    font-size: 2vh;
+    font-size: 2dvh;
     text-decoration: none;
     color:var(--lightColor);
-    padding-right: 1vw;
+    padding-right: 1dvw;
 }
 footer a:hover{
     color: var(--lightblue);
@@ -56,18 +54,25 @@ footer i{
 }
 footer #contact{
     float:left;
-    margin-left:15vw;
-    line-height: 80%;
+    margin-left:15dvw;
 }
-@media (max-width: 700px) {
+@media(min-width:800px){
     footer #contact{
-        margin-left: 0;
+        line-height: 80%;
+    }
+}
+@media (max-width: 800px) {
+    footer{
+        line-height: 2dvh;
+    }
+    footer #quicklinks{
+        display:none;
     }
 }
 footer #quicklinks{
     float:right;
     list-style-type: none;
-    margin-right:25vw;
+    margin-right:25dvw;
 }
 footer button{
     background-color: transparent;

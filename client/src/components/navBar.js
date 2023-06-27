@@ -6,7 +6,7 @@ import './css/NavBar.css';
 
 
 const NavBar = ({setScreenWidth}) => {
-    var isMobile = window.innerWidth < 700;
+    var isMobile = window.innerWidth < 800;
     var deviceState= (isMobile)?"off" :"active";
     const [activeStat, setActiveStat] = useState(deviceState);
     const [hamburger,setHamburger]= useState(false);

@@ -28,9 +28,6 @@ const Contact = ({ ScreenWidth }) => {
             // Handle error
           });
         console.log([...formData]);
-        nameRef.current.value="";
-        emailRef.current.value="";
-        messageRef.current.value="";
     }   
     const togglePopup=()=>{
         setPopped("none");

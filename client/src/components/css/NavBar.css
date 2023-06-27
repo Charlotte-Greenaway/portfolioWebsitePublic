@@ -9,12 +9,12 @@
 }
 #navBar li{
     
-    padding:2vh;
+    padding:2dvh;
 }
 #navBar a{
     text-decoration: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size:5vh;
+    font-size:5dvh;
     color: var(--lightblue);
     
 }
@@ -35,7 +35,7 @@
     float: right;
     display: flex;
     align-items: center;
-    height:80vh;
+    height:80dvh;
     top:0;
     right:0;
     position:absolute;
@@ -44,7 +44,7 @@
 }
 #navBar .active ul{
     opacity:1;
-    width:35vw;
+    width:35dvw;
     transition: opacity 0.5s ease, width 0.5s ease ;
 }
 
@@ -56,7 +56,7 @@
     display: flex;
     align-items: center;
     background-color: var(--navbackground);
-    height:80vh;
+    height:80dvh;
     top:0;
     position: fixed;
     right: 0;
@@ -68,8 +68,8 @@
 }
 
 #navBar button{
-  width:5vh;
-  height:5vh;
+  width:5dvh;
+  height:5dvh;
   border:none;
   border-radius: 2%;
   background-color: var(--lightblue);
@@ -126,7 +126,7 @@
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     #navBar nav{
       position: fixed;
       top: 0;

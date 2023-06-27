@@ -20,7 +20,7 @@ const Footer = () =>{
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
                 <h3>Contact</h3>
                 <p>Telephone: 07802 767605</p>
-                <p>Email: <a href="mailto:charlottegreenaway112@gmail.com">charlottegreenaway112@gmail.com</a></p>
+                <Link to="/contact"><p>Press to email.</p></Link>
                 <a href= 'https://github.com/Charlotte-Greenaway'><i className="fa fa-github" style={{fontSize:3+"vh"}}></i></a><a href="https://www.linkedin.com/in/charlotte-greenaway-777140183/"><i className="fa fa-linkedin" style={{fontSize:3+"vh"}}></i></a>
             </div>
             <div id="quicklinks">

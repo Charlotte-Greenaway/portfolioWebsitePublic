@@ -32,11 +32,11 @@ main h1{
     color:var(--navbackground);
     text-align: center;
 }
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .half{
-    width:61.1vw;
+    width:61.1dvw;
     transition: width 0.5s ease;
-    height:75vh;
+    height:75dvh;
     background-color: var(--maincolor);
   }
   .half img{
@@ -51,7 +51,7 @@ main h1{
 .full{
   width:100%;
   transition: width 0.7s ease;
-  height:75vh;
+  height:75dvh;
   background-color: var(--maincolor);
 }
 
@@ -104,16 +104,16 @@ main{
   background: #646464; /* Color of the track */
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .half{
     width:100%;
     transition: width 0.7s ease;
-    height:var(--mobheight);
+    height:75dvh;
     background-color: var(--maincolor);
     transition: display 0.7s ease;
   }
   .full {
-    height: var(--mobheight);
+    height: 75dvh;
   }
   img{
     height:24%;
