@@ -1,0 +1,168 @@
+
+.bulletPoint{
+  margin: 2.5%;
+}
+.full img{
+  margin-right:4%;
+}
+
+main .cursorflash {
+    animation: blinker 1s step-start infinite;
+    display: inline;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+main .cursor{
+    display:inline;
+}
+.subheader p{
+    display: inline;
+    font-family: "Courier New", monospace;
+    color: var(--navbackground);
+}
+p{
+  color:var(--navbackground);
+}
+main h1{
+    font-family: "Lato", Arial, sans-serif;
+    color:var(--navbackground);
+    text-align: center;
+}
+@media (min-width: 700px) {
+  .half{
+    width:61.1vw;
+    transition: width 0.5s ease;
+    height:75vh;
+    background-color: var(--maincolor);
+  }
+  .half img{
+    transition: transform 0.4s ease;
+    height:40%;
+  }
+  .full img{
+    transition: transform 0.4s ease;
+    height: 50%;
+  }
+}
+.full{
+  width:100%;
+  transition: width 0.7s ease;
+  height:75vh;
+  background-color: var(--maincolor);
+}
+
+.full{
+  position:relative;
+  animation:animateleft 0.3s}
+
+@keyframes animateleft{
+  from{left:-300px;opacity:0} to{left:0;opacity:1}
+}
+
+.half{
+  position:relative;
+  animation:animateleft 0.5s
+}
+@keyframes animateleft{
+  from{left:-300px;opacity:0} to{left:0;opacity:1}
+}
+
+main img:hover{
+  transform: scale(1.1);
+  transition: transform 0.4s ease;
+}
+
+main{
+  overflow-x: hidden;
+}
+
+/* Track */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the entire scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar handle */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color on hover */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+}
+.darkmode ::-webkit-scrollbar-track {
+  background: #646464; /* Color of the track */
+}
+
+@media (max-width: 700px) {
+  .half{
+    width:100%;
+    transition: width 0.7s ease;
+    height:var(--mobheight);
+    background-color: var(--maincolor);
+    transition: display 0.7s ease;
+  }
+  .full {
+    height: var(--mobheight);
+  }
+  img{
+    height:24%;
+  }
+  .active{
+    transition: width 0.7s ease;
+  }
+  .off{
+    transition: width 0.7s ease;
+  }
+}
+
+
+p{
+  font-family: "Lato", Arial, sans-serif;
+}
+main{
+  padding:2px;
+}
+
+.resume{
+  width: 350px;
+  height: 200px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+      transform: translateY(0);
+  }
+
+  40% {
+      transform: translateY(-30px);
+  }
+
+  60% {
+      transform: translateY(-15px);
+  }
+}
+
+
+.item {
+  animation: bounce 2s forwards;
+}
+.item1 {
+  animation: bounce 2s forwards;
+}

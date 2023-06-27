@@ -1,0 +1,83 @@
+/* Form container */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Labels */
+  label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Input fields */
+  
+ #contactForm input[type="text"],
+  #contactForm input[type="email"],
+  #contactForm textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  
+  /* Submit button */
+  input[type="submit"] {
+    background-color: var(--lightblue);
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: var(--hoverblue);
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 480px) {
+    form {
+      max-width: 300px;
+    }
+  }
+
+#contactForm input, #contactForm textarea{
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    width: 160px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    justify-self: center;
+    vertical-align: middle;
+    top:30%;
+    padding:5%
+  }
+
+.darkmode #popup{
+    background-color: var(--navbackground);
+}
+.darkmode textarea{
+    background-color: #ccc;
+}
+.darkmode input[type="text"]{
+    background-color: #ccc;
+}
+.darkmode input[type="email"]{
+    background-color: #ccc;
+}

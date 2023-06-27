@@ -1,0 +1,64 @@
+
+#card1 h2{
+  color: var(--primary-color);
+  text-align: center;
+  font-family: "Lato", Arial, sans-serif;
+}
+
+#card1,#card1flipped{
+  height: 300px;
+  width: 220px;
+  background-color: white;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 10%;
+  
+}
+.darkmode #card1{
+  background-color: grey;
+  color:black;
+}
+.darkmode #card1flipped{
+  background-color: grey;
+  color:black;
+}
+.darkmode #card1 p{
+  color: #dbd6d6;
+}
+.darkmode #card1flipped p{
+  color: #dbd6d6;
+}
+
+#card1flipped {
+  transform: rotateY(180deg);
+  box-shadow: 0px 50px 10px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  margin:10% 3%
+}
+#card1{
+  box-shadow: 0px 50px 10px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  margin:10% 3%
+}
+#back{
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  position: absolute;
+  right:1%;
+  padding:0 3%;
+}
+#front{
+  backface-visibility: hidden;
+  position: absolute;
+  padding:0 3%;
+}
+@media (max-width: 700px) {
+  .cardsContainer{
+    display:grid;
+    justify-content:center
+  }
+}

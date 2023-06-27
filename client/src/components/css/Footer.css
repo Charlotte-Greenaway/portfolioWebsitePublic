@@ -1,0 +1,82 @@
+:root{
+    --maincolor:rgb(244, 248, 252);
+    --navbackground:#687864;
+    --lightblue:#8FC1E3;
+    --lightColor:#F7F9FB;
+    --hoverblue:#5085A5;
+    --hrcolor:#31708E;
+    --mobheight:640px;
+    --mobheight2:640px;
+}
+.darkmode {
+    background-color: rgb(65, 64, 64);
+    --maincolor: #475244;
+    --navbackground:rgb(108, 110, 112);
+    --lightblue:#364a57;
+    --lightColor:#999c9e;
+    --hoverblue:#284252;
+    --hrcolor:#132e3a;
+  }
+.darkmode  p{
+    color:#868788
+}
+footer{
+    bottom:0;
+    position:fixed;
+    height:20vh;
+    width:100%;
+    background-color: var(--hrcolor);
+    font-family: sans-serif;
+    line-height: 100%;
+    left:0;
+}
+footer p{
+    font-size: 2vh;
+    color: var(--lightColor);
+    vertical-align: middle;
+}
+footer h3{
+    font-size: 3vh;
+    color: var(--lightblue);
+    vertical-align: middle;
+}
+footer a{
+    font-size: 2vh;
+    text-decoration: none;
+    color:var(--lightColor);
+    padding-right: 1vw;
+}
+footer a:hover{
+    color: var(--lightblue);
+}
+
+footer i{
+    margin-right: 2%;
+    color: var(--lightColor);
+}
+footer #contact{
+    float:left;
+    margin-left:15vw;
+    line-height: 80%;
+}
+@media (max-width: 700px) {
+    footer #contact{
+        margin-left: 0;
+    }
+}
+footer #quicklinks{
+    float:right;
+    list-style-type: none;
+    margin-right:25vw;
+}
+footer button{
+    background-color: transparent;
+    border: none;
+    font-size: 300%;
+}
+.darkmode footer button{
+    background-color: transparent;
+    border: none;
+    font-size: 300%;
+    color: white;
+}

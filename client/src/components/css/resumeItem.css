@@ -1,0 +1,87 @@
+
+#resume{
+    scroll-behavior: smooth;
+}
+.jobTitle{
+    font-family: "Lato", Arial, sans-serif;
+}
+.dates{
+    font-family: "Lato", Arial, sans-serif;
+}
+.info{
+    font-family:'Courier New', Courier, monospace ;
+}
+.jobContainer{
+    width:50%;
+    display: flex;
+    align-items: center; 
+}
+.job{
+    vertical-align: middle;
+    background-color: white;
+    border-radius: 10%;
+    box-shadow: 0px 50px 10px rgba(0, 0, 0, 0.2);
+    font-size: small;
+    padding: 3%;
+    transition: background-color 0.4s ease;
+}
+.job:hover{
+    background-color: rgb(224, 238, 233);
+    transition: background-color 0.4s ease;
+}
+.item1{
+    text-align: center;
+    height:90%;
+    display: flex;
+    justify-content: center;
+}
+.item{
+    text-align: center;
+    height:100%;
+    display: flex;
+    justify-content: center;
+}
+@media (max-width: 700px) {
+    .jobContainer {
+      width: 100%;
+      margin-left: 10%;
+    }
+  
+    .item1{
+        height: auto;
+        margin-bottom:20vh;
+        width:90%
+    }
+    .item {
+      height: auto;
+      padding-top: 10vh;
+      margin-bottom:20vh;
+      width:90%
+    }
+  }
+.job a{
+    left:0;
+    position:absolute;
+    font-size: 300%;
+    text-decoration: none;
+    margin-right: 1%;
+}
+
+.JT {
+    display: inline-block;
+    background-color: var(--navbackground);
+    padding: 0.1% 30%;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: var(--lightblue);
+  }
+
+.linkUp, .linkDown{
+    font-size: 200%;
+}
+.darkmode #resume a{
+    color: rgb(175, 174, 174);
+}
+.darkmode .job{
+    background-color: rgb(62, 78, 92);
+}

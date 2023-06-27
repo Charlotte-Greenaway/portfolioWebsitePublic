@@ -1,0 +1,272 @@
+
+#comp_container{
+
+    justify-self: center;
+}
+#innerrim {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    background-color: white;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#exitButton{
+    color: black;
+    border: 1px solid grey;
+    border-radius: 5%;
+    float: right;
+    background-color: rgb(204, 201, 201);
+}
+#exitButton:hover{
+    background-color: red;
+    transition-duration: 0.4s;
+}
+code{
+    cursor: pointer;
+}
+small{
+    font-size: 6px;
+}
+/*mobile*/
+@media (max-width: 700px) {
+    #outerrim{
+        display: 'flex';
+        justify-content: 'center';
+        width: 90%;
+        height: 450px;
+        border: 4px solid rgb(56, 56, 56);
+        border-radius: 5%;
+        background-color: rgb(56, 56, 56);
+    }
+    #stalk{
+        display:none;
+    }
+
+    #base{
+        display:none;
+    }
+    #innerrim input[type="text"] {
+        margin: 5%;
+        border: none;
+        outline: none;
+        font-size: 12px;
+        padding: 8px;
+        border-radius: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      #innerrim label {
+        margin: 5%;
+        font-size: 12px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      #results{
+        margin: 5%;
+        font-size: 18px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        max-height: 250px; /* Adjust the height as per your preference */
+        overflow-y: auto;
+        border: 1px solid grey;
+    }
+    .resultsTab{
+        font-size: 18px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        max-height: 200px; /* Adjust the height as per your preference */
+        overflow-y: auto;
+    }
+    small, br{
+        display: none;
+    }
+    .taskbar a{
+        font-size: large;
+    }
+    .windowContent {
+        font-size: 200%;
+    }
+}
+
+/*large desktop*/
+@media (min-width: 1500px) {
+    #outerrim{
+        display: 'flex';
+        width: 700px;
+        height: 450px;
+        border: 4px solid rgb(56, 56, 56);
+        border-radius: 5%;
+        background-color: rgb(56, 56, 56);
+    }
+    #stalk{
+        width: 50px;
+        height: 100px;
+        background-color: rgb(56, 56, 56);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #base{
+        width:400px;
+        height:30px;
+        background-color: rgb(56, 56, 56);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #innerrim input[type="text"] {
+        margin: 5%;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        padding: 8px;
+        border-radius: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      #innerrim label {
+        margin: 5%;
+        font-size: 18px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      #results{
+        margin: 5%;
+        font-size: 18px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        max-height: 200px; /* Adjust the height as per your preference */
+        overflow-y: auto;
+        border: 1px solid grey;
+    }
+    .resultsTab{
+        font-size: 18px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        max-height: 200px; /* Adjust the height as per your preference */
+        overflow-y: auto;
+    }
+
+}
+/*smaller desktop*/
+@media (min-width: 700px) and (max-width: 1500px) {
+    #outerrim{
+        display: 'flex';
+        width: 600px;
+        height: 350px;
+        border: 4px solid rgb(56, 56, 56);
+        border-radius: 5%;
+        background-color: rgb(56, 56, 56);
+    }
+
+    #stalk{
+        width: 50px;
+        height: 100px;
+        background-color: rgb(56, 56, 56);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #base{
+        width:400px;
+        height:30px;
+        background-color: rgb(56, 56, 56);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #innerrim input[type="text"] {
+        margin: 5%;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        padding: 8px;
+        border-radius: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      #innerrim label {
+        margin: 5%;
+        font-size: 18px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      #results{
+        margin: 5%;
+        font-size: 18px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        max-height: 150px; 
+        overflow-y: auto;
+        border: 1px solid grey;
+    }
+    .resultsTab{
+        font-size: 18px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        max-height: 200px; /* Adjust the height as per your preference */
+        overflow-y: auto;
+    }
+
+}
+.resultsTab button{
+    border: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: blue;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+.homepageMini{
+    height:100%;
+    .windowsScreen {
+        width: 100%;
+        height: 100%;
+        background-image: #0099cc;
+        border: 1px solid #000;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        position: relative;
+      }
+      
+      .taskbar {
+        width: 100%;
+        height: 40px;
+        background-color: #c9dcf2;
+        position: absolute;
+        bottom: 0;
+      }
+      
+      .windowContent {
+        width: 100%;
+        height: calc(100% - 40px);
+        padding: 20px;
+        box-sizing: border-box;
+        color: #fff;
+        font-family: Arial, sans-serif;
+      }
+      .taskbar p{
+        font-size: 190%;
+        margin: 0 10%;
+        text-align: center;
+      }
+
+}
+.searchTabClosed {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s, height 1s;
+}
+
+.searchTab {
+    opacity: 1;
+    height: auto;
+    transition: opacity 0.5s, height 1s;
+}
+a{
+    text-decoration: none;
+}
+.darkmode #innerrim{
+    background-color: rgb(192, 191, 191);
+}
+.darkmode input[type="text"]{
+    background-color: rgb(37, 37, 37);
+    color:white;
+}
+.darkmode .homepageMini{
+    background-image: none !important;
+    background-color: rgb(46, 39, 65);
+}
+.darkmode .taskbar{
+    background-color: #676969;
+}
