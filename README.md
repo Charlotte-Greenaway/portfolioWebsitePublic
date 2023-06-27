@@ -35,10 +35,14 @@ Follow the steps below to set up and run the project locally:
 git clone https://github.com/your-username/your-portfolio.git
 ```
 2. Install the dependencies:
+```shell
 npm install
+```
 
 3. Start the development server:
+```shell
 npm start
+```
 
 Open your browser and visit http://localhost:5000 to view the website.
 
@@ -52,7 +56,7 @@ Find the email transport configuration section.
 Replace the placeholder values with your Gmail credentials (e.g., email address and password).
 Note: For security reasons, it is recommended not to include sensitive information, such as passwords, in your codebase. Consider using environment variables or a secure configuration file to store these credentials.
 
-Contact
+###Contact
 If you have any questions, feel free to reach out to me:
 
 Email: charlottegreenaway112@gmail.com
