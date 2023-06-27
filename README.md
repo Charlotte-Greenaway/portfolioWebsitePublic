@@ -33,7 +33,7 @@ Follow the steps below to set up and run the project locally:
 
 ```shell
 git clone https://github.com/your-username/your-portfolio.git
-
+```
 2. Install the dependencies:
 npm install
 
