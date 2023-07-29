@@ -134,13 +134,10 @@ main{
   padding:2px;
 }
 
-.resume{
-  width: 350px;
-  height: 200px;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
+#resume{
+  display: flex;
+    flex-direction: column;
 }
-
 @keyframes bounce {
   0%,
   20%,
@@ -162,7 +159,9 @@ main{
 
 .item {
   animation: bounce 2s forwards;
+  margin-bottom: 30dvh;
 }
 .item1 {
   animation: bounce 2s forwards;
+  margin-bottom: 30dvh;
 }

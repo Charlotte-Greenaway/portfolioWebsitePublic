@@ -1,4 +1,6 @@
-
+p{
+    font-size: 2.5dvh;
+}
 
 #navBar{
     overflow: hidden;

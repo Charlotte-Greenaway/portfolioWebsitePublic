@@ -35,7 +35,7 @@ const NavBar = ({setScreenWidth}) => {
                     </li>
                     <hr/>
                     <li>
-                        <Link to="/certifications" onClick={isMobile ? hamPress : undefined}>Certifications</Link>
+                        <Link to="/certifications" onClick={isMobile ? hamPress : undefined}>Certifications &Projects</Link>
                     </li>
                     <hr/>
                     <li>

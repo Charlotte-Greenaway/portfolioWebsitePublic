@@ -73,6 +73,7 @@ footer #quicklinks{
     float:right;
     list-style-type: none;
     margin-right:25dvw;
+    line-height: 3dvh;
 }
 footer button{
     background-color: transparent;
