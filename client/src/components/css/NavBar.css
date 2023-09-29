@@ -115,7 +115,7 @@ p{
 /*cross*/
 #l1line{
     top:5%;
-    transform: translateY(150%) rotate(-45deg);
+    transform: translateY(170%) rotate(-45deg);
     transition: transform 0.5s ease;
 }
 #l2line{
@@ -123,7 +123,7 @@ p{
     transition: opacity 0.5s ease;
 }
 #l3line{
-    transform:translateY(-150%) rotate(45deg);
+    transform:translateY(-170%) rotate(45deg);
     transition: transform 0.5s ease;
 }
 

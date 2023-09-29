@@ -13,6 +13,7 @@ const Certifications = ({ScreenWidth}) => {
                 <ProjectCard title="Portfolio site" content="The site you are currently viewing! Made with React and Node.js." link="https://github.com/Charlotte-Greenaway/portfolioWebsitePublic" img={false}/>
                 <ProjectCard title="Google Ads Web Scraper" content="Using Node.js and puppeteer I created a website scraper that retrieved information of ads on sites, this reduced and automated several tasks at my current role." link={false} img={false}/>
                 <ProjectCard title="Google Ad Manager Automation" content="Using Node.js, React and the google ads api, I made a user-friendly app that helps the user bulk edit aspects of their google ads account - this was a helpful tool for both clients and the company." link={false} img={false}/>
+                <ProjectCard title="Solar System" content="I built solar system with react and A-frame, it allows a user to navigate the solar system and find out information about each planet - in 3D!" link="https://github.com/Charlotte-Greenaway/solarsystem" img={false}/>
             </div>
             <h1>Certifications</h1>
             <div className="cardsContainer">

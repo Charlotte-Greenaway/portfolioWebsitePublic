@@ -19,14 +19,9 @@ const Contact = ({ ScreenWidth }) => {
         formData.append('message', messageRef.current.value);
 
         axios.post('/submit-form', [...formData])
-        .then(response => {
-            console.log(response.data);
-            // Handle successful response
-          })
-          .catch(error => {
-            console.error(error);
-            // Handle error
-          });
+        .catch((error)=>{
+          console.warn(error)
+        })
         console.log([...formData]);
         nameRef.current.value = '';
         emailRef.current.value = '';

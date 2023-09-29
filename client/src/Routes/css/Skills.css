@@ -273,3 +273,44 @@ a{
 .darkmode .taskbar{
     background-color: #676969;
 }
+
+.outlineskill {
+    padding:0 2rem;
+    width: 17rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .skill{
+    border:1px solid #687864;
+    padding: 1em 0;
+  }
+  
+  .skillscontainer {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    font-family: "Poppins",Sans-serif;
+    justify-content: center;
+  }
+.outlineskill p{
+    border-left: 1px solid rgb(133, 132, 132);
+    padding-left: 5%;
+    font-family: "Courier New", monospace;
+}
+.tagtext{
+    margin-left: 1em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: "Courier New", monospace;
+} 
+
+.skillscontainer h4{
+    background-image: linear-gradient(transparent 50%, #8FC1E3 70%);
+    width: fit-content;
+    margin: 1em 0;
+    display: inline;
+}
+.skillshead{
+    display: flex;
+    justify-content: space-evenly;
+}

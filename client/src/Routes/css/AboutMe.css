@@ -134,9 +134,10 @@ main{
   padding:2px;
 }
 
-#resume{
+.resume{
   display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 @keyframes bounce {
   0%,
@@ -164,4 +165,80 @@ main{
 .item1 {
   animation: bounce 2s forwards;
   margin-bottom: 30dvh;
+}
+
+
+/* Style the resume panel container */
+.resume-panel {
+  max-width: 400px;
+  background-color: white;
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+  transition: max-height 0.5s ease-out;
+  max-height: 100px;
+}
+
+/* Show the content when the panel is active */
+.resume-panel.active {
+  max-height: 500px; /* Adjust the height as needed */
+}
+
+.resume-header {
+  padding: 0 20px;
+  text-align: center;
+}
+
+.resume-header h1 {
+  font-size: 24px;
+}
+
+.resume-header p {
+  font-size: 18px;
+  color: #31708E;
+}
+
+.resume-content {
+  padding: 0 20px;
+}
+
+.resume-content h2 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.resume-content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.resume-content li {
+  margin-bottom: 20px;
+}
+
+.resume-content h3 {
+  font-size: 18px;
+}
+
+
+/* Style the toggle button */
+.toggle-button {
+  background-color: #687864;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  max-width: 400px;
+  border: none;
+}
+
+/* Style the button hover effect */
+.toggle-button:hover {
+  background-color: #4a5547;
+}
+
+.resItem{
+  display: flex;
+    flex-direction: column;
+    margin:20px auto;
 }

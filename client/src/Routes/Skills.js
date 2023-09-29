@@ -1,122 +1,162 @@
-import React from 'react';
-import './css/Skills.css';
-import {useState, useEffect, useMemo} from 'react';
-import {Link } from 'react-router-dom';
-import windows from '../images/windows.jpg'
+import React from "react";
+import "./css/Skills.css";
 
-const Skills = ({ScreenWidth}) => {
-    //sets all available results
-    const results = useMemo(() => [
-      "Node.js",
-      "Html",
-      "Css",
-      "React",
-      "Javascript",
-      "Python",
-      "Problem solving",
-      "Research",
-      "Google Ad Manager",
-      "Google Ads API",
-      "Google Tag Manager",
-      "Prebid"
-    ], []);
-      const descriptions=[
-        "I have gained valuable experience with this in my current role while building a google ads API with a front end.",
-        "I have a solid understanding of HTML, I am able to easily create websites and elements using it.",
-        "I have a good understanding of css and can appply css to my projects in react and node.",
-        "I have completed several courses in Udemy on react and I am starting to apply this knowledge to several projects.",
-        "I have a great understanding of vanilla javascript and I am advancing my knowledge of JS frameworks such as React and Node.",
-        "I am learning and advancing on my knowledge in python in my degree.",
-        "In my current role I have effectively learnt to problem solve and independantly find solutions to technical problems.",
-        "In my current role, I have learnt to 'figure things out' on my own and have been given the independance to research tasks, I have really great research skills.",
-        "In my current role I use Google Ad Manager everyday and have experience making and implementing ad tags.",
-        "I have experience using the google ads api in my node projects to speed up longer tasks.",
-        "I have some experience creating and testing tags in google tag manager",
-        "I have experience in implementing prebid and the relevant ad code onto websites."
-      ];
-      //sets default search value
-    const [searchInput, setSearchInput]= useState("");
-    //sets the displayed default searches to results
-    const [searchResults, setSearchResults] = useState(results.map(skill => skill.name));
-    //defines default selected search to null
-    const [selectedResult, setSelectedResult] = useState(null);
-    //set default description
-    const [selectedDescription, setSelectedDescription] = useState(null);
-    //filters the results by user input and sets the display variable to this filter, updates on search input change
-    const [homepage,setHomepage]= useState(false);
-    useEffect(() => {
-        var filteredResults = results.filter((result) =>
-            result.toLowerCase().includes(searchInput.toLowerCase())
-        );
-        filteredResults = (searchInput !=="" && filteredResults.length=== 0)?[<p> No results</p>]:filteredResults;
-        setSearchResults((searchInput==="")?results:filteredResults)
-        
-      }, [searchInput, results]);
-      //handles change on text input
-    const handleInputChange = (event) => {
-     setSearchInput(event.target.value);
-    };
-    //handles click of result
-    const handleResultClick = (result) => {
-        const resultIndex = results.indexOf(result);
-        setSelectedResult(result);
-        setSelectedDescription(descriptions[resultIndex]);
-      };
-    const handleBack =()=>{
-        setSelectedResult(null);
-    }
-    const handleHomepage=()=>{
-      setHomepage(!homepage)
-      
-    }
-      return (
-        <main className={ScreenWidth === 'active' ? 'half' : 'full'} style={{display:"grid"}}>
-          <h1>Skills</h1>
-          <div id="comp_container">
-            <div id="outerrim">
-                <div id="innerrim">
-                    <div className={selectedResult === null && homepage=== false ? "searchTab" : "searchTabClosed" }>
-                    <button id="exitButton" onClick={handleHomepage}>X</button>
-                        <label>Search:</label>
-                        <input name= "searchBox" type="text" value={searchInput} onChange={handleInputChange} style={{disply:"inline"}}></input>
-                        <div id="results">
-                            {searchResults.map((result, index) => (
-                            <div style={{cursor:"pointer", color:"blue" }} key={index} onClick={() => handleResultClick(result)}>{result}</div>
-                            ))}
-                        </div>
-                    </div>
-                    <div className="resultsTab" style={{ display: selectedResult !== null && homepage=== false ? 'block' : "none" }}>
-                        <button onClick={handleBack}>back</button>
-                        <div><h2>{selectedResult}</h2></div>
-                        <div><p>{selectedDescription}</p></div>
-                    </div>
-                    <div className="homepageMini" style={{backgroundSize: "auto", backgroundImage:'url('+windows+')', display: homepage=== true ? 'block' : "none",  }}>
-                          <div className="windowsScreen">
-                          <div className="windowContent"> 
-                            <Link to="/" >&#127968;</Link> 	<br/>
-                            <small>About Me</small><br/>
-                            <code onClick={handleHomepage}>&#127758;</code> <br/>
-                            <small>Skills</small><br/>
-                             <Link to="/certifications" >&#9997;</Link> <br/>
-                             <small>Certifications</small>	<br/>
-                             <Link to="/resume" >&#128221; </Link>	<br/>
-                             <small>Resume</small><br/>
-                              <Link to="/contact" >&#128222;</Link>	<br/>
-                              <small>Contact</small><br/>
-                          </div>
-                          <div className="taskbar">
-                            <p><Link to="/" >&#127968;</Link> 	<code onClick={handleHomepage}>&#127758;</code>  <Link to="/certifications" >&#9997;</Link> 	<Link to="/resume" >&#128221; </Link>	 <Link to="/contact" >&#128222;</Link>	</p>
-                          </div>
-                      </div>
-                      </div>
+const Skills = ({ ScreenWidth }) => {
+  const skillsData = [
+    {
+      name: "HTML",
+      svg: (
+        <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="44.964"
+                viewBox="-52.5 0 361 361"
+                preserveAspectRatio="xMinYMin meet"
+              >
+                <path
+                  d="M255.555 70.766l-23.241 260.36-104.47 28.962-104.182-28.922L.445 70.766h255.11z"
+                  fill="grey"
+                />
+                <path
+                  d="M128 337.95l84.417-23.403 19.86-222.49H128V337.95z"
+                  fill="grey"
+                />
+                <path
+                  d="M82.82 155.932H128v-31.937H47.917l.764 8.568 7.85 88.01H128v-31.937H85.739l-2.919-32.704zM90.018 236.542h-32.06l4.474 50.146 65.421 18.16.147-.04V271.58l-.14.037-35.568-9.604-2.274-25.471z"
+                  fill="#EBEBEB"
+                />
+                <path
+                  d="M127.89 220.573h39.327l-3.708 41.42-35.62 9.614v33.226l65.473-18.145.48-5.396 7.506-84.08.779-8.576H127.89v31.937zM127.89 155.854v.078h77.143l.64-7.178 1.456-16.191.763-8.568H127.89v31.86z"
+                  fill="#FFF"
+                />
+              </svg>
+      ),
+      description:"With a solid understanding of HTML, I am able to easily create websites and elements using it."
+    },
+    {
+      name: "CSS",
+      svg: (
+        <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40px"
+                height="40px"
+                viewBox="0 0 48 48"
+              >
+                <g id="Layer_2" data-name="Layer 2">
+                  <g id="invisible_box" data-name="invisible box">
+                    <rect width="48" height="48" fill="none" />
+                  </g>
+                  <g id="Q3_icons" data-name="Q3 icons">
+                    <path d="M24,46,8.3,41.7,5,4H43L39.7,41.7ZM12,38.6l12,3.3,12-3.3L38.6,8H9.4Z" />
+                    <path d="M14,13H34L32.2,34.3,23.9,37l-8.4-2.1-.9-7.2h4.5v3.6l4.8.9,4.4-.9V25.9H14.6l-.3-4.5a2.3,2.3,0,0,1,1.5-.6c6.9,0,12.5.6,12.5.6V17.8H14.6Z" />
+                  </g>
+                </g>
+              </svg>
+      ),
+  description:"I have a good understanding of css and have experience using bootstrap."
+    },
+    {
+      name: "REACT",
+      svg: (
+        <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="44.964"
+                viewBox="0 0 40 44.964"
+              >
+                <path
+                  d="M21.087,20.97a4.015,4.015,0,1,0,5.485,1.469A4.015,4.015,0,0,0,21.087,20.97Zm18,4.356q-.4-.452-.834-.906.307-.322.594-.644c3.61-4.056,5.134-8.124,3.722-10.57-1.354-2.345-5.381-3.044-10.422-2.063q-.745.146-1.482.329-.141-.486-.3-.967C28.65,5.351,25.887,2,23.064,2c-2.708,0-5.325,3.141-6.994,8q-.246.719-.456,1.449-.493-.121-.989-.223c-5.319-1.092-9.6-.373-11.013,2.074-1.351,2.347.062,6.182,3.436,10.054q.5.575,1.032,1.124c-.417.429-.812.859-1.18,1.285-3.293,3.817-4.625,7.59-3.276,9.927,1.393,2.413,5.617,3.2,10.758,2.191q.625-.124,1.243-.279.226.79.5,1.567c1.662,4.76,4.264,7.8,6.963,7.8,2.786,0,5.58-3.266,7.272-8.226.134-.392.26-.8.38-1.218q.8.2,1.607.353c4.954.937,8.886.2,10.232-2.138,1.39-2.415-.043-6.466-3.495-10.408ZM5.276,14.257c.867-1.506,4.369-2.094,8.961-1.151q.44.091.9.2a46.005,46.005,0,0,0-.947,6.02,46.956,46.956,0,0,0-4.73,3.807q-.493-.51-.96-1.045h0C5.6,18.773,4.462,15.671,5.276,14.257Zm8.738,12.878c-1.148-.869-2.215-1.76-3.183-2.655.968-.89,2.035-1.777,3.18-2.644q-.062,1.325-.061,2.651t.064,2.648Zm0,8.859a16.269,16.269,0,0,1-5.935.209,3.97,3.97,0,0,1-2.79-1.476c-.818-1.418.251-4.447,3.067-7.712q.531-.614,1.1-1.2a46.066,46.066,0,0,0,4.737,3.822,46.768,46.768,0,0,0,.958,6.1q-.564.141-1.135.254ZM29.977,17.92q-1.131-.713-2.29-1.38-1.141-.656-2.308-1.264c1.333-.561,2.644-1.039,3.909-1.429a40.955,40.955,0,0,1,.69,4.073Zm-12.092-7.3c1.43-4.162,3.547-6.7,5.179-6.7,1.738,0,4,2.739,5.473,7.189q.144.435.272.875a46.038,46.038,0,0,0-5.681,2.183,45.1,45.1,0,0,0-5.663-2.208Q17.659,11.286,17.886,10.622Zm-.9,3.2a41.159,41.159,0,0,1,3.889,1.443q-2.362,1.219-4.6,2.656C16.452,16.488,16.692,15.114,16.986,13.823Zm-.711,17.223q1.117.715,2.267,1.378,1.173.675,2.377,1.294A40.909,40.909,0,0,1,17,35.212C16.7,33.9,16.457,32.505,16.275,31.046ZM28.54,38.117a16.267,16.267,0,0,1-2.783,5.245h0a3.97,3.97,0,0,1-2.672,1.679c-1.637,0-3.727-2.439-5.148-6.509q-.251-.722-.462-1.457a45.207,45.207,0,0,0,5.686-2.27,46.762,46.762,0,0,0,5.727,2.2q-.16.56-.347,1.111Zm.814-2.977c-1.28-.4-2.609-.882-3.962-1.451q1.144-.6,2.3-1.271,1.191-.687,2.32-1.409a40.811,40.811,0,0,1-.663,4.132Zm1-10.662q0,2.048-.128,4.093c-1.108.75-2.277,1.482-3.494,2.184s-2.412,1.342-3.59,1.924q-1.859-.891-3.646-1.92T16.028,28.58q-.155-2.044-.156-4.1h0q0-2.05.153-4.1c1.107-.756,2.268-1.488,3.468-2.181s2.421-1.336,3.63-1.917q1.836.892,3.606,1.912t3.482,2.155q.147,2.056.147,4.118Zm2.151-11.45c4.319-.84,7.576-.275,8.392,1.138.869,1.505-.377,4.83-3.493,8.333h0q-.258.29-.536.582a45.1,45.1,0,0,0-4.82-3.795,45.055,45.055,0,0,0-.912-5.955q.7-.172,1.369-.3Zm-.292,8.733a40.837,40.837,0,0,1,3.285,2.67,40.735,40.735,0,0,1-3.275,2.716q.052-1.335.051-2.672,0-1.358-.062-2.715Zm8.7,13.014c-.817,1.419-3.974,2.011-8.211,1.209q-.728-.137-1.494-.327a45.12,45.12,0,0,0,.871-6.029,44.826,44.826,0,0,0,4.8-3.858q.4.412.755.82h0a16.264,16.264,0,0,1,3.154,5.031,3.969,3.969,0,0,1,.121,3.153Z"
+                  transform="translate(-3.104 -2)"
+                  fill="black"
+                ></path>
+              </svg>
+      ),
+  description:"Most of my projects are built in react which include a recipe app and an instant messaging platform."
+    },
+      {
+      name: "NODE.JS",
+      svg: (
+        <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#000000"
+                width="40px"
+                height="40px"
+                viewBox="0 0 32 32"
+                version="1.1"
+              >
+                <title>nodejs</title>
+                <path d="M24.871 18.491c0-2.374-1.605-3.007-4.982-3.453-3.413-0.451-3.76-0.685-3.76-1.483 0-0.66 0.294-1.541 2.822-1.541 2.258 0 3.090 0.486 3.433 2.008 0.032 0.143 0.158 0.248 0.309 0.249h1.426c0.092-0.001 0.174-0.040 0.232-0.101l0-0c0.053-0.057 0.085-0.133 0.085-0.217 0-0.010-0-0.019-0.001-0.029l0 0.001c-0.221-2.622-1.963-3.844-5.483-3.844-3.134 0-5.004 1.322-5.004 3.54 0 2.406 1.859 3.070 4.867 3.368 3.599 0.352 3.878 0.878 3.878 1.586 0 1.228-0.986 1.752-3.302 1.752-2.908 0-3.548-0.73-3.763-2.177-0.025-0.153-0.156-0.269-0.315-0.269-0 0-0.001 0-0.001 0h-1.421c-0.001 0-0.001 0-0.002 0-0.174 0-0.315 0.141-0.315 0.315 0 0 0 0.001 0 0.001v-0c0 1.852 1.007 4.059 5.817 4.059 3.484 0.001 5.481-1.369 5.481-3.765zM15.998 30.996c-0 0-0.001 0-0.001 0-0.424 0-0.821-0.115-1.162-0.315l0.011 0.006-3.669-2.171c-0.547-0.306-0.28-0.415-0.1-0.479 0.633-0.2 1.183-0.456 1.691-0.773l-0.031 0.018c0.034-0.016 0.075-0.026 0.117-0.026 0.058 0 0.111 0.018 0.156 0.048l-0.001-0.001 2.819 1.673c0.049 0.027 0.108 0.042 0.17 0.042s0.121-0.016 0.172-0.043l-0.002 0.001 10.991-6.343c0.101-0.062 0.167-0.171 0.167-0.296 0-0 0-0.001 0-0.001v0-12.684c-0-0.128-0.068-0.239-0.17-0.302l-0.002-0.001-10.986-6.338c-0.049-0.028-0.107-0.044-0.169-0.044s-0.121 0.016-0.171 0.045l0.002-0.001-10.983 6.34c-0.104 0.062-0.172 0.174-0.174 0.301v12.684c0 0.126 0.070 0.235 0.172 0.293l0.002 0.001 3.010 1.739c1.633 0.817 2.634-0.145 2.634-1.112v-12.523c0-0 0-0 0-0 0-0.174 0.141-0.316 0.316-0.316 0.001 0 0.003 0 0.004 0h1.393c0 0 0.001 0 0.001 0 0.175 0 0.317 0.141 0.318 0.316v12.523c0.016 0.118 0.026 0.255 0.026 0.394 0 1.682-1.363 3.045-3.045 3.045-0.082 0-0.164-0.003-0.245-0.010l0.011 0.001c-0.024 0-0.053 0.001-0.082 0.001-0.906 0-1.753-0.256-2.47-0.701l0.020 0.012-2.884-1.658c-0.694-0.409-1.152-1.153-1.152-2.004 0-0 0-0 0-0v0-12.684c0-0.851 0.458-1.594 1.141-1.997l0.011-0.006 10.991-6.351c0.333-0.186 0.731-0.295 1.155-0.295s0.821 0.109 1.167 0.301l-0.012-0.006 10.989 6.351c0.695 0.409 1.154 1.152 1.155 2.003v12.684c-0.002 0.851-0.46 1.595-1.144 1.998l-0.011 0.006-10.989 6.346c-0.33 0.194-0.726 0.309-1.149 0.309-0.002 0-0.005 0-0.007 0h0z" />
+              </svg>
+      ),
+  description:"Utilised in personal projects and at work - including the use of websockets and APIs such as google ads."
+    },
+      {
+      name: "MONGODB",
+      svg: (
+        <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#000000"
+                width="40px"
+                height="40px"
+                viewBox="0 0 32 32"
+                version="1.1"
+              >
+                <path d="M15.821 23.185s0-10.361 0.344-10.36c0.266 0 0.612 13.365 0.612 13.365-0.476-0.056-0.956-2.199-0.956-3.005zM22.489 12.945c-0.919-4.016-2.932-7.469-5.708-10.134l-0.007-0.006c-0.338-0.516-0.647-1.108-0.895-1.732l-0.024-0.068c0.001 0.020 0.001 0.044 0.001 0.068 0 0.565-0.253 1.070-0.652 1.409l-0.003 0.002c-3.574 3.034-5.848 7.505-5.923 12.508l-0 0.013c-0.001 0.062-0.001 0.135-0.001 0.208 0 4.957 2.385 9.357 6.070 12.115l0.039 0.028 0.087 0.063q0.241 1.784 0.412 3.576h0.601c0.166-1.491 0.39-2.796 0.683-4.076l-0.046 0.239c0.396-0.275 0.742-0.56 1.065-0.869l-0.003 0.003c2.801-2.597 4.549-6.297 4.549-10.404 0-0.061-0-0.121-0.001-0.182l0 0.009c-0.003-0.981-0.092-1.94-0.261-2.871l0.015 0.099z" />
+              </svg>
+      ),
+  description:"This is used in my instant messaging project, creating databases for users and messages."
+    },
+   {
+      name: "GOOGLE AD CODE",
+      svg: (
+        <svg
+                xmlns="http://www.w3.org/2000/svg"
+                display="inline"
+                width="42"
+                height="42"
+                viewBox="0 0 42 42"
+              >
+                <path
+                  d="M18,34.111l-1.667,6.667L14.111,43H31.889l-2.222-2.222L28,34.111M3,25.222H43M7.444,34.111H38.556A4.444,4.444,0,0,0,43,29.667V7.444A4.444,4.444,0,0,0,38.556,3H7.444A4.444,4.444,0,0,0,3,7.444V29.667A4.444,4.444,0,0,0,7.444,34.111Z"
+                  transform="translate(-2 -2)"
+                  fill="none"
+                  stroke="black"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                ></path>
+              </svg>
+      ),
+  description:"At my current role I assist with the implementation and troubleshooting of ad code."
+    },
+  ];
+
+  return (
+    <main
+      className={ScreenWidth === "active" ? "half" : "full"}
+      style={{ display: "grid" }}
+    >
+      <h1>Skills</h1>
+      <div className="skillscontainer">
+      {skillsData.map(
+          (item)=>
+        <div key={item.name} className="skill">
+                  <div className="skillshead">
+                    <h4>{item.name}</h4>
+                    {item.svg}
+                  </div>
+                  <p className="tagtext">&lt;h3&gt;</p>
+                  <div className="outlineskill">
+                    <p>
+                      {item.description}
+                    </p>
+                  </div>
+                  <p className="tagtext">&lt;/h3&gt;</p>
                 </div>
-                <div id="stalk"></div>
-                <div id="base"></div>
-            </div>
-	    </div>
-         
-        </main>
-      );
-    };
+        )}
+      </div>
+    </main>
+  );
+};
 
 export default Skills;
